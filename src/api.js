@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-const API_BASE_URL = 'https://notesappbackend-bulx.onrender.com';
+const API_BASE_URL = 'https://notesapp-backend-w4kz.onrender.com';
 
 export const fetchNotes = async () => {
     try {
