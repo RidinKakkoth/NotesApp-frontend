@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState, useEffect } from "react";
 import { fetchNotes, addNote, deleteNote } from "./api";
 import moment from "moment";
@@ -34,7 +33,7 @@ function App() {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      e.preventDefault(); // Prevents a new line in the textarea
+      e.preventDefault(); 
       handleAddNote();
     }
   };
@@ -50,7 +49,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-500 flex flex-col items-center">
-      {/* Header */}
       <div className="w-full bg-black py-4 flex items-center gap-2 px-2">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="white" className="size-6">
           <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
@@ -58,7 +56,6 @@ function App() {
         <h1 className="text-3xl text-white font-bold">Notes</h1>
       </div>
 
-      {/* Input Section */}
       <div className="w-full max-w-md mt-8 px-4">
         <textarea
           value={noteContent}
@@ -68,8 +65,7 @@ function App() {
           className="w-3/4 h-24 p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
         />
       </div>
-
-      {/* Notes Container */}
+ 
       <div className="w-full max-w-full mt-10 px-4 columns-1 sm:columns-2 md:columns-3 lg:columns-5 gap-4 space-y-4">
         {notes.map((note) => (
           <div
